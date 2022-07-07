@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ARRAY TRAVERSING</title>
+    <script type="text/javascript">
+        let data = [6, 8, 9, 5, 2, 1, 3, 0, 1, 1, 4, 6, 3, 7]
+        //    for(let i= 0 ; i<data.length;i++){
+        //        document.write(`${data[i]}<br>`);
+        //        let x= 10;
+
+        //        document.write(`${data[x]}<br>`);
+        //     }
+        function getElement() {
+            let el = document.getElementById('element').value;
+            if (el < data.length && typeof parseInt(el) === "number") {
+
+                alert(data[el]);
+            }
+            else {
+                alert("Please enter valied Data")
+            }
+        }
+        //  input.addEventListener("keyup", (e) =>{
+
+        //           if(e.keyCode === 13){
+        //             getElement();
+        //           }
+        //  })
+        //    function getKeyenter(e){
+        //     if (e.keyCode == 13) alert('razz');
+
+        //    }
+        // function handle(e){
+        //     if(e.keyCode === 13){
+        //         getElement(); // Ensure it is only this code that runs
+
+        //         alert("Enter was pressed was presses");
+        //     }
+        // }
+        var input = document.getElementById("myInput");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                // document.getElementById("myBtn").click();
+                getElement();
+            }
+        });
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <input type="text" name="" id="element" >
+    <button onclick="getElement()">get Element</button>
+    
+
+</body>
+
+</html>
